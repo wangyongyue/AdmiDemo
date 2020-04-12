@@ -2,11 +2,13 @@
 <template>
   <div style="float: left;width: 100%;">
     <AdminRecord :list="list"></AdminRecord>
+
   </div>
 </template>
 
 <script>
   import AdminRecord from '@/Admin/AdminRecord'
+
 
   export default {
     name: 'AdminInbound',

@@ -9,6 +9,7 @@ import Print from 'vue-print-nb'
 import axios from 'axios'
 import VueCookies from 'vue-cookies'
 
+
 Vue.prototype.$axios = axios
 axios.defaults.baseURL = '/api'
 axios.defaults.headers.post['Content-Type'] = 'application/json';

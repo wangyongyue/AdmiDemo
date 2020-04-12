@@ -17,6 +17,10 @@
     <div style="float: left;width: 1000px;height: 1000px;margin-left: 30px">
       <component :is="currentView"></component>
     </div>
+    <div style="float: left;width: 1000px;height: 1000px;margin-left: 30px;background-color: red">
+      <TableController :m="m"></TableController>
+    </div>
+
   </div>
 </template>
 
@@ -31,6 +35,8 @@
   import AdminInboundAdd from '@/Admin/AdminInboundAdd'
   import AdminManagement from '@/Admin/AdminManagement'
   import AdminSafe from '@/Admin/AdminSafe'
+  import TableController from '@/controllers/TableController'
+  import {test} from '../models/test'
 
 
   export default {
@@ -45,11 +51,13 @@
       AdminOutboundAdd,
       AdminInboundAdd,
       AdminManagement,
-      AdminSafe
+      AdminSafe,
+      TableController
 
     },
     data() {
       return{
+        m:new test(),
         currentView:"AdminOutbound",
         menus:[
           {
@@ -91,10 +99,12 @@
 
       }
     },
+
     methods: {
 
       enterMenu(index){
 
+        // alert(setupData())
         // for(let i = 0;i < this.menus.length;i ++){
         //   let item = this.menus[i]
         //   item.isH = false;
@@ -103,6 +113,7 @@
 
       },
       clickMenu(index){
+
 
         for(let i = 0;i < this.menus.length;i ++){
           let item = this.menus[i]

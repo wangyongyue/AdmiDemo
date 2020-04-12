@@ -20,3 +20,6 @@ conf.prototype.getData = function (response){
   this.data = items;
   return items
 }
+conf.prototype.click = function (index){
+
+}

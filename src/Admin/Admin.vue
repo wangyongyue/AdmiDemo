@@ -8,8 +8,9 @@
 
     </div>
     <div style="width: 120px;height: 1000px;float: left;margin-left: 50px">
-      <AdminMenu v-for="(item,index) in menus"
-                 :info="item"
+      <AdminMenu v-for="(menu,index) in menus"
+                 :info="menu"
+                 :key="index"
                  v-on:clickMenu="clickMenu(index)"
                  v-on:enterMenu="enterMenu(index)"
       ></AdminMenu>
@@ -35,9 +36,9 @@
   import AdminInboundAdd from '@/Admin/AdminInboundAdd'
   import AdminManagement from '@/Admin/AdminManagement'
   import AdminSafe from '@/Admin/AdminSafe'
+
   import TableController from '@/controllers/TableController'
   import {test} from '../models/test'
-
 
   export default {
     name: 'Admin',

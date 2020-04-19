@@ -10,7 +10,7 @@ function networking() {
   this.params = {};
 
 }
-networking.prototype.getData = function (axios,conf,success){
+networking.prototype.request = function (axios,conf,success){
 
   var params = new URLSearchParams()
   params.append('table', conf.url)

@@ -47,7 +47,7 @@
       requestModules(){
 
         var net = new networking()
-        net.getData(this.$axios,this.m,response =>  {
+        net.request(this.$axios,this.m,response =>  {
 
           this.items = this.m.getData(response)
 

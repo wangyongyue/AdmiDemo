@@ -9,6 +9,7 @@
   import {conf} from '../models/conf'
   import AdminGoods from '@/Admin/AdminGoods'
   import comTest from '@/components/comTest'
+  import {networking} from '../controllers/networking'
 
 
   export default {
@@ -45,27 +46,13 @@
       },
       requestModules(){
 
-        var params = new URLSearchParams()
-        params.append('table', this.m.table)
-        params.append('params', JSON.stringify(this.m.params))
+        var net = new networking()
+        net.getData(this.$axios,this.m,response =>  {
 
-        this.$axios
-          .post('/getNew', params)
-          .then(response => {
-            var data = response['data']
-            if (data['code'] == 1000) {
+          this.items = this.m.getData(response)
 
-              this.items = this.m.getData(response)
+        })
 
-            }else {
-
-              alert(data("message"))
-            }
-
-          })
-          .catch(function (error) {
-            alert(error)
-          })
       },
     }
   }

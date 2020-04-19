@@ -1,13 +1,12 @@
 
-export { //很关键
+export {
   test
 }
 import {conf} from '../models/conf'
 
 function test() {
 
-  this.requestType = "POST";
-  this.table = "StockOut";
+  this.url = "StockOut";
   this.params = {};
 
 }

@@ -4,8 +4,8 @@ export { //很关键
 
 function conf() {
 
-  this.requestType = "POST";
-  this.table = "";
+  this.requestType = "GET";
+  this.url = "";
   this.params = {};
   this.data = null;
 

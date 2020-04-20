@@ -6,7 +6,7 @@ import {conf} from '../models/conf'
 
 function test() {
 
-  this.url = "StockOut";
+  this.url = "/stockOut";
   this.params = {};
 
 }

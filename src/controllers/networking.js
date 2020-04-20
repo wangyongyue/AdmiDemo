@@ -5,10 +5,6 @@ export { //很关键
 
 function networking() {
 
-  this.requestType = "POST";//get update  delete none
-  this.url = "StockOut";
-  this.params = {};
-
 }
 networking.prototype.request = function (axios,conf,success){
 
